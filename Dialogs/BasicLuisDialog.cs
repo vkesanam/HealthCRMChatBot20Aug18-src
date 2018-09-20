@@ -43,7 +43,7 @@ namespace Microsoft.Bot.Sample.LuisBot
             //await this.ShowLuisResult(context, result);
             if (customerName == null)
             {
-                string message = "Glad to talk to you. Welcome to Virtual Customer Service.";
+                string message = "Glad to talk to you. Welcome to Health Customer Service.";
                 //await context.PostAsync(message);
 
                 PromptDialog.Text(
