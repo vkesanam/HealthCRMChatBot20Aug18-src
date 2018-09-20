@@ -167,12 +167,28 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AlBadaa.png" />
+    <Content Include="AlQusais.png" />
+    <Content Include="AlSafa.png" />
     <Content Include="botchat.css" />
     <Content Include="botchat.js" />
     <Content Include="Chat2.png" />
+    <Content Include="DAlBarsha.png" />
+    <Content Include="DDHAHeadOffice.png" />
     <Content Include="default.htm" />
+    <Content Include="DMankhool.png" />
+    <Content Include="Equestrian.jpg" />
+    <Content Include="fitness.jpg" />
     <Content Include="GargashGroup.html" />
     <Content Include="Global.asax" />
+    <Content Include="karting.jpg" />
+    <Content Include="kidskarting.jpg" />
+    <Content Include="logo.png" />
+    <Content Include="NadAlHamar.png" />
+    <Content Include="Paintball.jpg" />
+    <Content Include="recreation.jpg" />
+    <Content Include="shooting.jpg" />
+    <Content Include="wakeboarding.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
