@@ -19,6 +19,16 @@ namespace Microsoft.Bot.Sample.LuisBot
         {
         }
 
+        string customerName;
+        string complaint;
+        string email;
+        string phone;
+        string servicename;
+        string appointmentdate;
+        string hospitalname;
+        string doctorname;
+        private string name;
+
         [LuisIntent("None")]
         public async Task NoneIntent(IDialogContext context, LuisResult result)
         {
@@ -30,7 +40,31 @@ namespace Microsoft.Bot.Sample.LuisBot
         [LuisIntent("Greeting")]
         public async Task GreetingIntent(IDialogContext context, LuisResult result)
         {
-            await this.ShowLuisResult(context, result);
+            //await this.ShowLuisResult(context, result);
+            if (customerName == null)
+            {
+                string message = "Glad to talk to you. Welcome to Virtual Customer Service.";
+                //await context.PostAsync(message);
+
+                PromptDialog.Text(
+                context: context,
+                resume: CustomerNameFromGreeting,
+                prompt: "May i know your Name please?",
+                retry: "Sorry, I don't understand that.");
+            }
+            else
+            {
+                string message = "Tell me " + customerName + ". How i can help you?";
+                await context.PostAsync(message);
+            }
+        }
+        public async Task CustomerNameFromGreeting(IDialogContext context, IAwaitable<string> result)
+        {
+            string response = await result;
+            customerName = response;
+
+            string message = "Thanks " + customerName + ".Tell me. How i can help you?";
+            await context.PostAsync(message);
         }
 
         [LuisIntent("Cancel")]
